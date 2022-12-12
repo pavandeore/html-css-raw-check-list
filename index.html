@@ -1,0 +1,83 @@
+<style>
+ul {
+  list-style: none;
+  margin: 50px;
+  padding: 0;
+  color: #999;
+}
+li {
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 40px 30px;
+  }
+  li::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    width: 20px;
+    height: 100px;
+    border: 2px solid lightblue;
+    border-width: 0 0 0 2px;
+    }
+    li:last-child::before {
+      border-width: 0px;
+      }
+  li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 2px solid lightblue;
+    border-radius: 50%;
+    }
+  li.passed,
+  li.current {
+    color: #000;
+    }
+    li.passed::after {
+      border-color: dodgerblue;
+      background: dodgerblue;
+      }
+li.done::after {
+  
+      border: 0px;
+  content : 'L';
+  font-family: arial;
+  background: transparent;
+  
+   font-family: arial;
+  -ms-transform: scaleX(-1) rotate(-35deg); /* IE 9 */
+  -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
+  transform: scaleX(-1) rotate(-35deg);
+  
+  
+      }
+    li.current::before,
+    li.current::after {
+      border-color: dodgerblue;
+      }
+      </style>
+      
+      
+      <body>
+      
+      <ul>
+  <li class="done">Step #1</li>
+  <li class="done">Step #2</li>
+  <li class="done">Step #3</li>
+  <li class="passed">Step #4</li>
+  <li class="current">Step #5</li>
+  <li class="current">Step #6</li>
+  <li class="current">Step #7</li>
+</ul>
+      
+      </body>
+      
+      
+      
+      
+      
